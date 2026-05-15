@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | TalentBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body style="padding-top: 80px;">
+
+  <div id="navbar-container"></div>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Have questions? Our team is ready to help you navigate your next career move.</p>
+      </div>
+      <div class="contact-grid" data-aos="fade-up">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h4>Headquarters</h4><p>TalentBridge Tower, Koramangala,<br />Bengaluru – 560 034, Karnataka</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+            <div><h4>Phone</h4><p>+91 80 4567 8900<br />+91 80 4567 8901</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div><h4>Email</h4><p>careers@talentbridge.in<br />hr@talentbridge.in</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-clock"></i></div>
+            <div><h4>Office Hours</h4><p>Mon – Fri: 9:00 AM – 7:00 PM IST<br />Sat: 10:00 AM – 2:00 PM IST</p></div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="cName">Full Name</label>
+            <input type="text" id="cName" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email</label>
+            <input type="email" id="cEmail" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cSubject">Subject</label>
+            <input type="text" id="cSubject" placeholder="How can we help?" />
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" rows="5" placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="contact-success" id="contactSuccess" style="display:none;">
+            <i class="fas fa-check-circle"></i> Message sent! We'll respond within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

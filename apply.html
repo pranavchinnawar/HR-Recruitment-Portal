@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply | TalentBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body style="padding-top: 80px;">
+
+  <div id="navbar-container"></div>
+
+  <!-- ===== APPLICATION FORM ===== -->
+  <section class="apply-section" id="apply">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Join Us</span>
+        <h2 class="section-title">Submit Your Application</h2>
+        <p class="section-subtitle">One form, thousands of opportunities. Our recruiters review every application.</p>
+      </div>
+      <div class="apply-wrapper" data-aos="fade-up">
+        <form class="apply-form" id="applyForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName"><i class="fas fa-user"></i> Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="e.g. Priya Sharma" required />
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="priya@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone"><i class="fas fa-phone"></i> Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required />
+            </div>
+            <div class="form-group">
+              <label for="preferredRole"><i class="fas fa-briefcase"></i> Preferred Role *</label>
+              <select id="preferredRole" name="preferredRole" required>
+                <option value="">Select a role...</option>
+                <option value="software-engineer">Software Engineer</option>
+                <option value="data-analyst">Data Analyst</option>
+                <option value="data-scientist">Data Scientist</option>
+                <option value="frontend-developer">Frontend Developer</option>
+                <option value="qa-automation-engineer">QA Automation Engineer</option>
+                <option value="ai-/-ml-engineer">AI / ML Engineer</option>
+                <option value="devops-engineer">Devops Engineer</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="skills"><i class="fas fa-tools"></i> Key Skills *</label>
+              <input type="text" id="skills" name="skills" placeholder="e.g. Python, React, AWS, Machine Learning" required />
+              <span class="field-hint">Separate skills with commas</span>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="experience"><i class="fas fa-history"></i> Years of Experience *</label>
+              <div class="experience-slider-wrapper">
+                <input type="range" id="experience" name="experience" min="0" max="20" value="3" class="exp-slider" />
+                <div class="exp-labels">
+                  <span>Fresher</span>
+                  <span class="exp-value" id="expValue">3 Years</span>
+                  <span>20+ Yrs</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="coverLetter"><i class="fas fa-comment-alt"></i> Cover Letter / Message</label>
+              <textarea id="coverLetter" name="coverLetter" rows="4" placeholder="Tell us why you're a great fit..."></textarea>
+            </div>
+            <div class="form-group form-group-full">
+              <label><i class="fas fa-file-upload"></i> Upload Resume *</label>
+              <div class="file-drop-zone" id="fileDropZone">
+                <div class="file-drop-inner">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <p>Drag & drop your resume here</p>
+                  <span>or</span>
+                  <label for="resumeFile" class="file-browse-btn">Browse File</label>
+                  <input type="file" id="resumeFile" name="resumeFile" accept=".pdf,.doc,.docx" hidden />
+                  <p class="file-hint">PDF, DOC, DOCX up to 5MB</p>
+                </div>
+                <div class="file-preview" id="filePreview" style="display:none;">
+                  <i class="fas fa-file-pdf"></i>
+                  <span id="fileName"></span>
+                  <button type="button" id="removeFile"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
+          </div>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Application Submitted!</h3>
+            <p>Thank you! Our recruiters will review your profile and reach out within 3–5 business days.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

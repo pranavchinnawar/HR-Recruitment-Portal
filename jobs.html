@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jobs | TalentBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body style="padding-top: 80px;">
+
+  <div id="navbar-container"></div>
+
+  <!-- ===== JOB LISTINGS ===== -->
+  <section class="jobs-section" id="jobs">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Open Positions</span>
+        <h2 class="section-title">Current Job Openings</h2>
+        <p class="section-subtitle">Explore our latest opportunities across engineering, data, and AI.</p>
+      </div>
+
+      <div class="jobs-filter" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Roles</button>
+        <button class="filter-btn" data-filter="engineering">Engineering</button>
+        <button class="filter-btn" data-filter="data">Data & AI</button>
+        <button class="filter-btn" data-filter="qa">Quality</button>
+      </div>
+
+      <div class="jobs-grid" id="jobsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

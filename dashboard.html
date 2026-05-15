@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | TalentBridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body style="padding-top: 80px;">
+
+  <div id="navbar-container"></div>
+
+  <!-- ===== HR DASHBOARD ===== -->
+  <section class="dashboard-section" id="dashboard">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">HR Portal</span>
+        <h2 class="section-title">Recruiter Dashboard</h2>
+        <p class="section-subtitle">Real-time overview of recruitment pipeline and candidate status.</p>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="dashboard-stats" data-aos="fade-up">
+        <div class="dash-stat-card">
+          <div class="dsc-icon bg-blue"><i class="fas fa-users"></i></div>
+          <div class="dsc-info">
+            <span class="dsc-value" data-target="1284">0</span>
+            <p class="dsc-label">Total Applicants</p>
+            <span class="dsc-trend up"><i class="fas fa-arrow-up"></i> 12% this week</span>
+          </div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dsc-icon bg-green"><i class="fas fa-briefcase"></i></div>
+          <div class="dsc-info">
+            <span class="dsc-value" data-target="47">0</span>
+            <p class="dsc-label">Open Positions</p>
+            <span class="dsc-trend up"><i class="fas fa-arrow-up"></i> 5 added today</span>
+          </div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dsc-icon bg-orange"><i class="fas fa-calendar-check"></i></div>
+          <div class="dsc-info">
+            <span class="dsc-value" data-target="38">0</span>
+            <p class="dsc-label">Scheduled Interviews</p>
+            <span class="dsc-trend up"><i class="fas fa-arrow-up"></i> 8 this week</span>
+          </div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="dsc-icon bg-purple"><i class="fas fa-star"></i></div>
+          <div class="dsc-info">
+            <span class="dsc-value" data-target="156">0</span>
+            <p class="dsc-label">Shortlisted</p>
+            <span class="dsc-trend down"><i class="fas fa-arrow-down"></i> Review pending</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidates Table + Interview Scheduler -->
+      <div class="dashboard-main" data-aos="fade-up">
+        <div class="candidates-panel">
+          <div class="panel-header">
+            <h3>Candidate Profiles</h3>
+            <div class="panel-search">
+              <i class="fas fa-search"></i>
+              <input type="text" id="candidateSearch" placeholder="Search candidates..." />
+            </div>
+          </div>
+          <div class="candidates-list" id="candidatesList">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="interview-panel">
+          <div class="panel-header"><h3>Schedule Interview</h3></div>
+          <form class="interview-form" id="interviewForm">
+            <div class="form-group">
+              <label for="iCandidate"><i class="fas fa-user"></i> Candidate</label>
+              <select id="iCandidate">
+                <option value="">Select candidate...</option>
+                <option>Rahul Mehta – Software Engineer</option>
+                <option>Ananya Iyer – Data Analyst</option>
+                <option>Vikram Nair – Frontend Developer</option>
+                <option>Sneha Patel – QA Engineer</option>
+                <option>Arjun Das – AI Engineer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="iDate"><i class="fas fa-calendar"></i> Interview Date</label>
+              <input type="date" id="iDate" min="" />
+            </div>
+            <div class="form-group">
+              <label for="iTime"><i class="fas fa-clock"></i> Interview Time</label>
+              <input type="time" id="iTime" value="10:00" />
+            </div>
+            <div class="form-group">
+              <label for="iMode"><i class="fas fa-video"></i> Mode</label>
+              <select id="iMode">
+                <option value="video">Video Call (Teams)</option>
+                <option value="phone">Phone Interview</option>
+                <option value="in-person">In-Person</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="iPanel"><i class="fas fa-user-tie"></i> Panel / Interviewer</label>
+              <input type="text" id="iPanel" placeholder="e.g. Dr. Suresh Kumar" />
+            </div>
+            <div class="form-group">
+              <label for="iNotes"><i class="fas fa-sticky-note"></i> Notes</label>
+              <textarea id="iNotes" rows="3" placeholder="Round 1 – Technical screening..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <i class="fas fa-calendar-plus"></i> Schedule Interview
+            </button>
+            <div class="interview-success" id="interviewSuccess" style="display:none;">
+              <i class="fas fa-check-circle"></i> Interview scheduled successfully!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
