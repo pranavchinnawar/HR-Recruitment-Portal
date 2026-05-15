@@ -1,5 +1,7 @@
 # TalentBridge - HR Recruitment Portal
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge)](https://pranavchinnawar.github.io/HR-Recruitment-Portal/)
+
 A modern, responsive, and fully-featured frontend template for an IT company's HR recruitment portal. Designed with a sleek corporate UI, the portal connects top tech talent with amazing career opportunities.
 
 ## 🚀 Features
